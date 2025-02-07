@@ -138,6 +138,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* <header>
+        <h1>Apple Tasting Elo Experiment</h1>
+      </header> */}
 
       <div className="main-content">
         <div className="tasting-panel">

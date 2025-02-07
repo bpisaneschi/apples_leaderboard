@@ -1,0 +1,230 @@
+/* Define some CSS variables for consistency and modern feel */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #50e3c2;
+    --accent-color: #e94e77;
+    --bg-color: #f7f9fc;
+    --text-color: #333;
+    --border-color: #e1e8ed;
+    --font-family: 'Roboto', sans-serif;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+  }
+  
+  .App {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+  }
+  
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  /* Tasting Panel Styles */
+  .tasting-panel {
+    flex: 1 1 65%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .tasting-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .dropdowns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+  
+  .dropdowns label {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  
+  .dropdowns select {
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .buttons {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .buttons button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .buttons button:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* Leaderboard Styles */
+  .leaderboard {
+    margin-top: 30px;
+  }
+  
+  .leaderboard h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .leaderboard table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 95%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .leaderboard th,
+  .leaderboard td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .leaderboard th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.1em;
+  }
+  
+  .leaderboard tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Add Apple Styles */
+  .add-apple {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .add-apple h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .add-apple form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .add-apple input {
+    padding: 10px 15px;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 250px;
+  }
+  
+  .add-apple button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background: var(--accent-color);
+    color: #fff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .add-apple button:hover {
+    background: var(--secondary-color);
+  }
+  
+  /* History Panel Styles */
+  .history-panel {
+    flex: 1 1 30%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  .history-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .history-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .history-panel li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .history-panel li strong {
+    color: var(--primary-color);
+  }
+  
+  .history-panel li button {
+    background-color: var(--accent-color);
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .history-panel li button:hover {
+    background-color: var(--secondary-color);
+  }
