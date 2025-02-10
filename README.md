@@ -1,4 +1,4 @@
-# Apple Elo Experiment
+# Elo Experiment
 
 A modern web app implementing the Elo rating system for pairwise comparisons. Initially designed for apple tastings, this application allows users to compare items, track ratings dynamically, and maintain a historical log of past comparisons.
 
@@ -20,7 +20,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your system.
 ### Steps
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/yourusername/elo-experiment.git
+   git clone https://github.com/bpisaneschi/elo-experiment.git
    cd elo-experiment
    ```
 2. **Install Dependencies**
