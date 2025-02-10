@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/apples_leaderboard/static/css/main.3c97f568.css",
-    "main.js": "/apples_leaderboard/static/js/main.8f21652d.js",
-    "index.html": "/apples_leaderboard/index.html",
-    "main.3c97f568.css.map": "/apples_leaderboard/static/css/main.3c97f568.css.map",
-    "main.8f21652d.js.map": "/apples_leaderboard/static/js/main.8f21652d.js.map"
+    "main.css": "/elo-experiment/static/css/main.3c97f568.css",
+    "main.js": "/elo-experiment/static/js/main.8f21652d.js",
+    "index.html": "/elo-experiment/index.html",
+    "main.3c97f568.css.map": "/elo-experiment/static/css/main.3c97f568.css.map",
+    "main.8f21652d.js.map": "/elo-experiment/static/js/main.8f21652d.js.map"
   },
   "entrypoints": [
     "static/css/main.3c97f568.css",
