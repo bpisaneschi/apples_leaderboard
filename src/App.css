@@ -1,282 +1,302 @@
-/* Import a modern font (e.g., Montserrat from Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-
-/* CSS Variables for consistent theming */
-:root {
-  --primary-color: #1a73e8;
-  --secondary-color: #4285f4;
-  --accent-color: #e37400;
-  --bg-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  --card-bg: #ffffff;
-  --text-color: #202124;
-  --border-color: rgba(32, 33, 36, 0.12);
-  --box-shadow: 0 4px 12px rgba(32, 33, 36, 0.15);
-  --transition-speed: 0.3s;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
   margin: 0;
-  background: var(--bg-gradient);
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
-  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #d9e2ec);
+  color: #333;
 }
 
 .App {
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-header {
+/* Header */
+.app-header {
   text-align: center;
-  margin-bottom: 40px;
+  padding: 20px 0;
 }
 
-header h1 {
-  font-size: 2.8em;
-  font-weight: 600;
-  color: var(--primary-color);
+/* Arena Tabs */
+.arena-tabs {
+  display: flex;
+  justify-content: flex-start;
   margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  border-bottom: 2px solid #ccc;
 }
 
+.arena-tab {
+  background: #eef2f6;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 16px;
+  margin-right: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.arena-tab:hover {
+  background: #dce4ea;
+  transform: translateY(-2px);
+}
+
+.arena-tab.active {
+  background: #fff;
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.new-arena-tab {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* New Arena Input */
+.new-arena-input {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.new-arena-input form {
+  display: inline-flex;
+  align-items: center;
+}
+
+.new-arena-input input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.new-arena-input button {
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-arena-input button:hover {
+  background-color: #357ABD;
+}
+
+/* Main Content */
 .main-content {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* Card-style panels */
-.tasting-panel,
-.history-panel {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: var(--box-shadow);
-  transition: transform var(--transition-speed) ease;
-}
-
-.tasting-panel:hover,
-.history-panel:hover {
-  transform: translateY(-3px);
-}
-
-/* Tasting Panel takes 65% width on wider screens */
+/* Tasting Panel (Main Section) */
 .tasting-panel {
-  flex: 1 1 65%;
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .tasting-panel h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: var(--primary-color);
-  font-size: 1.9em;
+  margin-top: 0;
 }
 
-/* Dropdown styling */
+/* Dropdowns & Buttons */
 .dropdowns {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .dropdowns label {
-  font-size: 1.1em;
-  font-weight: 500;
+  flex: 1;
+  margin-right: 10px;
 }
 
 .dropdowns select {
-  margin-left: 8px;
-  padding: 10px 15px;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  font-size: 1em;
-  outline: none;
-  transition: border var(--transition-speed) ease;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.dropdowns select:focus {
-  border-color: var(--primary-color);
-}
-
-/* Button styling */
 .buttons {
-  text-align: center;
-  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .buttons button {
-  padding: 12px 30px;
-  margin: 0 12px;
-  font-size: 1em;
-  border: none;
-  border-radius: 50px;
-  background: var(--primary-color);
+  flex: 1;
+  padding: 10px;
+  background: #4a90e2;
   color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: background 0.3s;
 }
 
 .buttons button:hover {
-  background: var(--secondary-color);
-  transform: scale(1.03);
+  background: #357ABD;
 }
 
-/* Leaderboard Styling */
+/* Leaderboard */
 .leaderboard {
-  margin-top: 30px;
-}
-
-.leaderboard h2 {
-  text-align: center;
   margin-bottom: 20px;
-  color: var(--primary-color);
-  font-size: 1.8em;
 }
 
 .leaderboard table {
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
-  width: 95%;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .leaderboard th,
 .leaderboard td {
-  padding: 15px 20px;
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
 
 .leaderboard th {
-  background: var(--primary-color);
-  color: #fff;
-  font-size: 1.1em;
+  background: #f7f7f7;
 }
 
-.leaderboard tr:last-child td {
-  border-bottom: none;
-}
-
-/* Add Apple Section */
-.add-apple {
-  text-align: center;
-  margin-top: 35px;
-}
-
-.add-apple h2 {
-  margin-bottom: 20px;
-  color: var(--primary-color);
-  font-size: 1.8em;
-}
-
-.add-apple form {
+/* Add Item */
+.add-item form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.add-apple input {
-  padding: 12px 20px;
-  font-size: 1em;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  width: 260px;
-  transition: border var(--transition-speed) ease;
+.add-item input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.add-apple input:focus {
-  border-color: var(--primary-color);
-  outline: none;
-}
-
-.add-apple button {
-  padding: 12px 30px;
-  font-size: 1em;
-  border: none;
-  border-radius: 50px;
-  background: var(--accent-color);
+.add-item button {
+  padding: 8px 12px;
+  background: #4a90e2;
   color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: background 0.3s;
 }
 
-.add-apple button:hover {
-  background: var(--secondary-color);
-  transform: scale(1.03);
+.add-item button:hover {
+  background: #357ABD;
 }
 
-/* History Panel Styling */
+/* History Panel */
 .history-panel {
-  flex: 1 1 30%;
-  max-height: 600px;
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-height: 500px;
   overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .history-panel h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: var(--primary-color);
-  font-size: 1.8em;
+  margin-top: 0;
 }
 
 .history-panel ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .history-panel li {
-  padding: 15px 10px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: background var(--transition-speed) ease;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
 }
 
-.history-panel li:hover {
-  background: #f1f3f4;
-}
-
-.history-panel li strong {
-  color: var(--primary-color);
-}
-
-.history-panel li button {
-  background-color: var(--accent-color);
-  border: none;
+.history-panel .delete-btn {
+  margin-left: 10px;
+  background: #e74c3c;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 0.9em;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background var(--transition-speed) ease, transform var(--transition-speed) ease;
+  transition: background 0.3s;
 }
 
-.history-panel li button:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05);
+.history-panel .delete-btn:hover {
+  background: #c0392b;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-  
-  .tasting-panel,
-  .history-panel {
-    flex: 1 1 100%;
-  }
+/* Arena Tab Wrapper */
+.arena-tab-wrapper {
+  position: relative;
+}
+
+/* Inline Editing for Arenas */
+.arena-edit-input {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+/* Inline Editing for Items */
+.item-edit-input {
+  font-size: 14px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Inline Editing for Arenas */
+.arena-tab-wrapper {
+  position: relative;
+}
+
+.arena-edit-input {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 150px;
+}
+
+/* Inline Editing for Items */
+.item-edit-input {
+  font-size: 14px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Leaderboard sort options */
+.sort-options {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.sort-options button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a90e2;
+  font-weight: normal;
+}
+
+.sort-options button.active-sort {
+  font-weight: bold;
+  text-decoration: underline;
 }
